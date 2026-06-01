@@ -115,9 +115,9 @@
       inset: 0;
       z-index: -2;
       background:
-        linear-gradient(90deg, rgba(3, 28, 35, .76), rgba(6, 76, 91, .46) 46%, rgba(7, 111, 131, .12)),
-        linear-gradient(180deg, rgba(0,0,0,.01), rgba(0,0,0,.2)),
-        url("assets/round-blue.jpg") center / cover;
+        linear-gradient(90deg, rgba(3, 28, 35, .78), rgba(4, 45, 52, .52) 38%, rgba(4, 45, 52, .22) 68%, rgba(4, 45, 52, .16)),
+        linear-gradient(180deg, rgba(0,0,0,.1), rgba(0,0,0,.22)),
+        url("assets/hero-sign.jpg") center / cover;
       transform: scale(1.02);
     }
 
@@ -135,7 +135,7 @@
     .hero-inner {
       width: min(1180px, 100%);
       display: grid;
-      grid-template-columns: minmax(0, 1.04fr) minmax(300px, .76fr);
+      grid-template-columns: minmax(0, 760px);
       align-items: center;
       gap: min(6vw, 76px);
     }
@@ -224,6 +224,7 @@
     }
 
     .hero-panel {
+      display: none;
       position: relative;
       min-height: 430px;
     }
