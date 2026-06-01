@@ -242,18 +242,39 @@
     }
 
     .hero.variant-plate .resin-piece {
-      display: none;
+      display: block;
+      right: 18px;
+      top: 28px;
+      width: min(410px, 94%);
+      aspect-ratio: 1.42 / 1;
+      border-width: 11px;
+      border-radius: 24px;
+      transform: rotate(-4.5deg);
     }
 
     .hero.variant-plate .hero-panel {
-      min-height: 250px;
+      min-height: 430px;
     }
 
     .hero.variant-plate .mini-profile {
       left: auto;
-      right: 0;
-      bottom: 0;
-      width: min(360px, 90%);
+      right: 82px;
+      bottom: 54px;
+      width: min(340px, 80%);
+      display: block;
+      padding: 18px 22px;
+      background: rgba(255,255,255,.92);
+    }
+
+    .hero.variant-plate .mini-profile img,
+    .hero.variant-plate .mini-profile b {
+      display: none;
+    }
+
+    .hero.variant-plate .mini-profile p {
+      color: var(--ink);
+      font-weight: 800;
+      line-height: 1.75;
     }
 
     .mini-profile {
@@ -742,7 +763,7 @@
           <img src="assets/michelly-character.jpg" alt="Michelle's Labのキャラクター">
           <div>
             <b>Michelle's Lab</b>
-            <p>キャラクターは控えめに。作品の海を主役に、さりげないハワイ感でまとめます。</p>
+            <p>光の角度で変わる波の表情。ひとつずつ手作業で制作しています。</p>
           </div>
         </div>
       </div>
