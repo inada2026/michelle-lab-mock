@@ -126,9 +126,9 @@
       inset: 0;
       z-index: -2;
       background:
-        linear-gradient(90deg, rgba(255,250,243,.72), rgba(255,250,243,.34) 36%, rgba(255,250,243,.07) 62%, rgba(255,250,243,.24)),
-        linear-gradient(180deg, rgba(255,250,243,.12), rgba(255,250,243,0) 42%, rgba(255,250,243,.78) 82%, var(--paper)),
-        radial-gradient(ellipse at 72% 68%, rgba(255,250,243,0) 0 40%, rgba(255,250,243,.48) 72%, var(--paper) 100%);
+        linear-gradient(90deg, rgba(255,250,243,.58), rgba(255,250,243,.22) 36%, rgba(255,250,243,.04) 62%, rgba(255,250,243,.18)),
+        linear-gradient(180deg, rgba(0,104,128,.05), rgba(0,116,140,.08) 42%, rgba(255,250,243,.72) 82%, var(--paper)),
+        radial-gradient(ellipse at 72% 68%, rgba(255,250,243,0) 0 40%, rgba(255,250,243,.42) 72%, var(--paper) 100%);
     }
 
     .hero-inner {
@@ -158,15 +158,17 @@
       max-width: 760px;
       margin-bottom: 20px;
       font-size: clamp(38px, 6.4vw, 78px);
+      font-weight: 950;
       line-height: 1.08;
       letter-spacing: 0;
+      text-shadow: 0 2px 18px rgba(255,255,255,.3);
     }
 
     .hero-word {
       display: inline-block;
       position: relative;
       padding: 0 .08em;
-      color: #b9f4ff;
+      color: #32bfd3;
       white-space: nowrap;
     }
 
@@ -185,8 +187,10 @@
     .lead {
       max-width: 660px;
       margin-bottom: 30px;
-      color: rgba(21, 50, 58, .78);
+      color: rgba(16, 43, 51, .9);
       font-size: clamp(16px, 1.7vw, 20px);
+      font-weight: 700;
+      text-shadow: 0 1px 12px rgba(255,255,255,.52);
     }
 
     .actions {
@@ -258,23 +262,20 @@
 
     .hero.variant-plate .mini-profile {
       left: auto;
-      right: 82px;
-      bottom: 54px;
-      width: min(340px, 80%);
-      display: block;
-      padding: 18px 22px;
+      right: 58px;
+      bottom: 44px;
+      width: min(365px, 84%);
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      padding: 17px 20px;
       background: rgba(255,255,255,.92);
-    }
-
-    .hero.variant-plate .mini-profile img,
-    .hero.variant-plate .mini-profile b {
-      display: none;
     }
 
     .hero.variant-plate .mini-profile p {
       color: var(--ink);
-      font-weight: 800;
-      line-height: 1.75;
+      font-size: 12px;
+      font-weight: 750;
+      line-height: 1.65;
     }
 
     .mini-profile {
@@ -402,6 +403,10 @@
       color: var(--muted);
       font-size: 13px;
       line-height: 1.6;
+    }
+
+    .product-card-plate img {
+      object-position: center 38%;
     }
 
     .band {
@@ -610,6 +615,7 @@
 
     .links a {
       display: inline-flex;
+      gap: 8px;
       min-height: 44px;
       align-items: center;
       justify-content: center;
@@ -619,6 +625,62 @@
       background: var(--white);
       border: 1px solid var(--line);
       font-weight: 900;
+    }
+
+    .social-icon {
+      width: 24px;
+      height: 24px;
+      display: inline-grid;
+      place-items: center;
+      flex: 0 0 auto;
+      color: white;
+      border-radius: 8px;
+      font-size: 10px;
+      font-weight: 950;
+      line-height: 1;
+    }
+
+    .social-icon.line {
+      background: #06c755;
+      border-radius: 999px;
+    }
+
+    .social-icon.instagram {
+      background: linear-gradient(135deg, #feda75, #fa7e1e 32%, #d62976 58%, #962fbf 78%, #4f5bd5);
+      border-radius: 8px;
+      font-size: 0;
+    }
+
+    .social-icon.instagram::before {
+      content: "";
+      width: 11px;
+      height: 11px;
+      border: 2px solid white;
+      border-radius: 4px;
+    }
+
+    .social-icon.link {
+      color: var(--teal);
+      background: #dff8f4;
+      border: 1px solid rgba(7,111,131,.18);
+    }
+
+    .social-icon.base {
+      background: var(--deep);
+    }
+
+    .youtube-links a {
+      min-height: 52px;
+      padding: 0 20px;
+      color: white;
+      background: linear-gradient(135deg, #e63636, #b81733);
+      border: 0;
+      box-shadow: 0 14px 28px rgba(184, 23, 51, .18);
+    }
+
+    .youtube-links a:nth-child(2) {
+      background: linear-gradient(135deg, #0b7c91, #064a58);
+      box-shadow: 0 14px 28px rgba(6, 74, 88, .18);
     }
 
     .cta {
@@ -758,7 +820,7 @@
         </div>
       </div>
       <div class="hero-panel" aria-label="レジンで作った波の作品イメージ">
-        <div class="resin-piece"><img src="assets/heart-island-hero.jpg" alt="ハートアイランドの海レジンボード作品"></div>
+        <div class="resin-piece"><img src="assets/top_product.jpeg" alt="ハートアイランドの海レジンボード作品"></div>
         <div class="mini-profile">
           <img src="assets/michelly-character.jpg" alt="Michelle's Labのキャラクター">
           <div>
@@ -778,35 +840,35 @@
         <p class="text">コースターやトレイ、タンブラー、キーホルダーなど、海を身近に感じられるアイテムを揃えています。</p>
         <div class="product-grid">
           <article class="product">
-            <figure><img src="assets/keyholder-display.jpg" alt="レジンのトレイ作品"></figure>
+            <figure><img src="assets/product-tray.jpg" alt="レジンのトレイ作品"></figure>
             <div class="product-body">
               <h3>Tray</h3>
               <p>イベントでも人気の、置くだけで海を感じるトレイ。</p>
             </div>
           </article>
           <article class="product">
-            <figure><img src="assets/keyholder-close.jpg" alt="レジンのコースター作品"></figure>
+            <figure><img src="assets/product-coaster.jpg" alt="レジンのコースター作品"></figure>
             <div class="product-body">
               <h3>Coaster</h3>
               <p>日常使いにもギフトにも選びやすい小さな海。</p>
             </div>
           </article>
-          <article class="product">
-            <figure><img src="assets/round-blue.jpg" alt="名刺サイズのレジンプレート"></figure>
+          <article class="product product-card-plate">
+            <figure><img src="assets/product-card-plate.jpg" alt="名刺サイズのレジンプレート"></figure>
             <div class="product-body">
               <h3>Card Plate</h3>
               <p>受付やデスクに飾りやすい名刺サイズのプレート。</p>
             </div>
           </article>
           <article class="product">
-            <figure><img src="assets/plate-shell.jpg" alt="キーホルダーを含む作品イメージ"></figure>
+            <figure><img src="assets/product-keyholder.jpg" alt="キーホルダーを含む作品イメージ"></figure>
             <div class="product-body">
               <h3>Keyholder</h3>
               <p>定番で制作している、持ち歩ける海のアクセント。</p>
             </div>
           </article>
           <article class="product">
-            <figure><img src="assets/tumbler.jpg" alt="タンブラー作品のイメージ"></figure>
+            <figure><img src="assets/product-tumbler.png" alt="タンブラー作品のイメージ"></figure>
             <div class="product-body">
               <h3>Tumbler</h3>
               <p>誕生日プレゼントにも選ばれる特別感のある作品。</p>
@@ -848,20 +910,20 @@
     <section class="section" id="order">
       <div class="section-inner">
         <div class="quote-band">
-        <p>作品・販売・レッスンの入口を、ひとつに。</p>
-          <span>Instagram、lit.link、YouTube、BASE準備中へ迷わず進める導線をまとめます。</span>
+          <p>見たい・買いたい・相談したい時に、すぐつながれます。</p>
+          <span>作品写真や制作の様子、レッスンのご相談、販売再開のお知らせまで、わかりやすくご案内します。</span>
         </div>
         <div class="flow">
-          <div><b>1. Instagram / lit.link</b><p>新作、制作動画、各リンクへの入口。既存の導線を活かします。</p></div>
-          <div><b>2. Official Page</b><p>世界観、代表作品、レッスン、委託販売先を整理して伝えます。</p></div>
-          <div><b>3. BASE</b><p>現在は準備中として掲載。再開後に商品ページへ自然に誘導します。</p></div>
-          <div><b>4. Workshop</b><p>単発ワークショップや相談の案内を、準備できた段階で掲載します。</p></div>
+          <div><b>1. Instagram</b><p>新作や制作風景、日々の作品紹介はこちら。</p></div>
+          <div><b>2. 公式LINE</b><p>オーダーやレッスン、作品についてのご相談はこちら。</p></div>
+          <div><b>3. lit.link</b><p>SNSや関連リンクをまとめて確認できます。</p></div>
+          <div><b>4. BASE</b><p>作品販売は現在準備中です。再開後にこちらからご案内します。</p></div>
         </div>
         <div class="links" aria-label="外部リンク">
-          <a href="https://lin.ee/uU3DzxQ" target="_blank" rel="noopener">公式LINE</a>
-          <a href="https://www.instagram.com/michelly_aloha/" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://lit.link/michelles_lab" target="_blank" rel="noopener">lit.link</a>
-          <a href="#order">BASE準備中</a>
+          <a href="https://lin.ee/uU3DzxQ" target="_blank" rel="noopener"><span class="social-icon line">LINE</span>公式LINE</a>
+          <a href="https://www.instagram.com/michelly_aloha/" target="_blank" rel="noopener"><span class="social-icon instagram"></span>Instagram</a>
+          <a href="https://lit.link/michelles_lab" target="_blank" rel="noopener"><span class="social-icon link">↗</span>lit.link</a>
+          <a href="#order"><span class="social-icon base">B</span>BASE準備中</a>
         </div>
       </div>
     </section>
@@ -898,7 +960,6 @@
       <div class="section-inner">
         <p class="kicker">YouTube</p>
         <h2>波が生まれる瞬間は、動画で伝わる。</h2>
-        <p class="text">長尺動画やショート動画は、作品の透明感や制作の楽しさを伝える大切な入口。ホームページではYouTubeチャンネルへの導線を置き、サムネイルや発信設計は別途コンサルとして整理します。</p>
         <div class="video-strip">
           <a class="video-link" href="https://www.youtube.com/watch?v=CZvmw-uRfyg" target="_blank" rel="noopener">
             <figure>
@@ -918,9 +979,9 @@
             <p>波が広がる瞬間や作品の質感、レッスンの雰囲気など、写真だけでは伝わりにくい魅力を動画でも紹介しています。</p>
           </div>
         </div>
-        <div class="links" aria-label="YouTubeリンク">
-          <a href="https://www.youtube.com/@michelab_tube" target="_blank" rel="noopener">チャンネルはこちら</a>
-          <a href="https://www.youtube.com/channel/UCUWqn7CwyOzfKCAFKHLMA4w" target="_blank" rel="noopener">サブチャンネルはこちら</a>
+        <div class="links youtube-links" aria-label="YouTubeリンク">
+          <a href="https://www.youtube.com/@michelab_tube" target="_blank" rel="noopener"><span class="social-icon base">▶</span>メインチャンネルを見る</a>
+          <a href="https://www.youtube.com/channel/UCUWqn7CwyOzfKCAFKHLMA4w" target="_blank" rel="noopener"><span class="social-icon line">▶</span>サブチャンネルを見る</a>
         </div>
       </div>
     </section>
