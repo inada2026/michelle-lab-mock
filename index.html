@@ -63,17 +63,35 @@
 
     .brand {
       display: flex;
-      align-items: baseline;
-      gap: 10px;
+      align-items: center;
+      gap: 11px;
       font-weight: 900;
       line-height: 1;
     }
 
-    .brand span:first-child {
+    .brand-avatar {
+      width: 38px;
+      height: 38px;
+      overflow: hidden;
+      flex: 0 0 auto;
+      background: white;
+      border: 2px solid rgba(255,255,255,.62);
+      border-radius: 50%;
+      box-shadow: 0 8px 22px rgba(0,0,0,.14);
+    }
+
+    .brand-avatar img {
+      object-position: center 18%;
+    }
+
+    .brand-title {
+      display: block;
       font-size: 21px;
     }
 
-    .brand span:last-child {
+    .brand-subtitle {
+      display: block;
+      margin-top: 4px;
       color: rgba(255,255,255,.74);
       font-size: 12px;
       font-weight: 700;
@@ -82,9 +100,13 @@
     .nav {
       display: flex;
       align-items: center;
-      gap: 17px;
+      gap: 14px;
       font-size: 13px;
       font-weight: 800;
+    }
+
+    .nav a {
+      white-space: nowrap;
     }
 
     .nav a:last-child {
@@ -759,6 +781,40 @@
       border-radius: 8px;
     }
 
+    .cta-content {
+      display: grid;
+      grid-template-columns: 70px 1fr;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .cta-character {
+      width: 70px;
+      height: 70px;
+      overflow: hidden;
+      background: white;
+      border: 2px solid rgba(255,255,255,.7);
+      border-radius: 50%;
+      box-shadow: 0 14px 30px rgba(0,0,0,.18);
+    }
+
+    .cta-character img {
+      object-position: center 18%;
+    }
+
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: flex-end;
+    }
+
+    .button.form-ready {
+      color: var(--deep);
+      background: linear-gradient(135deg, #fff, #fff3df);
+      border: 1px solid rgba(255,255,255,.7);
+    }
+
     .cta h2 {
       margin-bottom: 8px;
       font-size: clamp(26px, 4vw, 42px);
@@ -808,6 +864,10 @@
       .video-strip,
       .cta {
         grid-template-columns: 1fr;
+      }
+
+      .cta-actions {
+        justify-content: flex-start;
       }
 
       .hero-panel {
@@ -861,14 +921,17 @@
 <body>
   <header class="topbar">
     <a class="brand" href="#top" aria-label="Michelle's Lab">
-      <span>Michelle's Lab</span>
-      <span>Hawaiian Resin Art</span>
+      <span class="brand-avatar"><img src="assets/michelly-face-5.png" alt="Michelle's Labのアイコン"></span>
+      <span class="brand-text">
+        <span class="brand-title">Michelle's Lab</span>
+        <span class="brand-subtitle">Hawaiian Resin Art</span>
+      </span>
     </a>
     <nav class="nav" aria-label="Main navigation">
-      <a href="#works">Works</a>
-      <a href="#lesson">Lesson</a>
-      <a href="#youtube">YouTube</a>
-      <a href="#contact">Contact</a>
+      <a href="#works">作品を見る</a>
+      <a href="#lesson">購入・相談</a>
+      <a href="#youtube">動画を見る</a>
+      <a href="#contact">フォーム相談</a>
     </nav>
   </header>
 
@@ -1080,11 +1143,17 @@
 
     <section class="section" id="contact">
       <div class="section-inner cta">
-        <div>
-          <h2>作品購入・オーダー・レッスンのご相談はこちら。</h2>
-          <p>作品、ギフト制作、ワークショップのご相談は、公式LINE、Instagram、またはlit.linkからお問い合わせください。</p>
+        <div class="cta-content">
+          <span class="cta-character"><img src="assets/michelly-face-6.png" alt="Michelle's Labのキャラクター"></span>
+          <div>
+            <h2>お問い合わせはフォームから。</h2>
+            <p>作品、ギフト制作、ワークショップのご相談をGoogleフォームで受け付ける想定です。正式なフォームURLが決まり次第、このボタンに設定します。</p>
+          </div>
         </div>
-        <a class="button light" href="https://lin.ee/uU3DzxQ" target="_blank" rel="noopener">公式LINEで相談する</a>
+        <div class="cta-actions">
+          <a class="button form-ready" href="#contact">Googleフォーム準備中</a>
+          <a class="button light" href="https://lin.ee/uU3DzxQ" target="_blank" rel="noopener">公式LINEも見る</a>
+        </div>
       </div>
     </section>
   </main>
