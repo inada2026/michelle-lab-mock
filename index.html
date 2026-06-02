@@ -508,24 +508,36 @@
     .flow {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 1px;
-      overflow: hidden;
+      gap: 14px;
       margin-top: 30px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--line);
     }
 
-    .flow div {
-      padding: 22px;
+    .flow-card {
+      position: relative;
+      min-height: 258px;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
       background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 12px 28px rgba(65, 82, 82, .06);
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    }
+
+    .flow-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(7,111,131,.25);
+      box-shadow: 0 20px 42px rgba(14, 78, 91, .14);
     }
 
     .flow b {
-      display: block;
-      margin-bottom: 8px;
+      display: flex;
+      gap: 9px;
+      align-items: center;
+      margin-bottom: 12px;
       color: var(--deep);
-      font-size: 15px;
+      font-size: 16px;
     }
 
     .flow p {
@@ -533,6 +545,38 @@
       color: var(--muted);
       font-size: 14px;
       line-height: 1.65;
+    }
+
+    .flow-character {
+      width: 62px;
+      height: 62px;
+      align-self: flex-end;
+      margin-top: auto;
+      overflow: hidden;
+      background: #fff;
+      border: 2px solid rgba(0,164,189,.16);
+      border-radius: 50%;
+      box-shadow: 0 10px 24px rgba(14, 78, 91, .12);
+    }
+
+    .flow-character img {
+      object-position: center 18%;
+    }
+
+    .flow-cta {
+      display: inline-flex;
+      gap: 7px;
+      align-items: center;
+      margin-top: 14px;
+      color: var(--teal);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .flow-cta::after {
+      content: "→";
+      font-size: 16px;
+      line-height: 1;
     }
 
     .video-strip {
@@ -933,17 +977,31 @@
           <p>見たい・買いたい・相談したい時に、すぐつながれます。</p>
           <span>作品写真や制作の様子、レッスンのご相談、販売再開のお知らせまで、わかりやすくご案内します。</span>
         </div>
-        <div class="flow">
-          <div><b>1. Instagram</b><p>新作や制作風景、日々の作品紹介はこちら。</p></div>
-          <div><b>2. 公式LINE</b><p>オーダーやレッスン、作品についてのご相談はこちら。</p></div>
-          <div><b>3. lit.link</b><p>SNSや関連リンクをまとめて確認できます。</p></div>
-          <div><b>4. BASE</b><p>作品販売は現在準備中です。再開後にこちらからご案内します。</p></div>
-        </div>
-        <div class="links" aria-label="外部リンク">
-          <a href="https://lin.ee/uU3DzxQ" target="_blank" rel="noopener"><span class="social-icon line">LINE</span>公式LINE</a>
-          <a href="https://www.instagram.com/michelly_aloha/" target="_blank" rel="noopener"><span class="social-icon instagram"></span>Instagram</a>
-          <a href="https://lit.link/michelles_lab" target="_blank" rel="noopener"><span class="social-icon link">↗</span>lit.link</a>
-          <a href="#order"><span class="social-icon base">B</span>BASE準備中</a>
+        <div class="flow" aria-label="お問い合わせとSNSの入口">
+          <a class="flow-card" href="https://www.instagram.com/michelly_aloha/" target="_blank" rel="noopener">
+            <b><span class="social-icon instagram"></span>Instagram</b>
+            <p>新作や制作風景、日々の作品紹介はこちら。作品の雰囲気を写真で見たい方におすすめです。</p>
+            <span class="flow-cta">Instagramを見る</span>
+            <span class="flow-character"><img src="assets/michelly-face-1.jpg" alt="Michelle's Labのキャラクター"></span>
+          </a>
+          <a class="flow-card" href="https://lin.ee/uU3DzxQ" target="_blank" rel="noopener">
+            <b><span class="social-icon line">LINE</span>公式LINE</b>
+            <p>オーダーやレッスン、作品についてのご相談はこちら。気になることを直接聞きたい時に。</p>
+            <span class="flow-cta">LINEで相談する</span>
+            <span class="flow-character"><img src="assets/michelly-face-2.jpg" alt="Michelle's Labのキャラクター"></span>
+          </a>
+          <a class="flow-card" href="https://lit.link/michelles_lab" target="_blank" rel="noopener">
+            <b><span class="social-icon link">↗</span>lit.link</b>
+            <p>YouTubeやSNSなど、Michelle's Labの関連リンクをまとめて確認できます。</p>
+            <span class="flow-cta">リンク一覧を見る</span>
+            <span class="flow-character"><img src="assets/michelly-face-3.jpg" alt="Michelle's Labのキャラクター"></span>
+          </a>
+          <a class="flow-card" href="#order">
+            <b><span class="social-icon base">B</span>BASE準備中</b>
+            <p>作品販売は現在準備中です。再開後に、購入できる作品ページへご案内します。</p>
+            <span class="flow-cta">準備中のお知らせ</span>
+            <span class="flow-character"><img src="assets/michelly-face-4.png" alt="Michelle's Labのキャラクター"></span>
+          </a>
         </div>
       </div>
     </section>
