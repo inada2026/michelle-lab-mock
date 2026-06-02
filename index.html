@@ -134,11 +134,11 @@
     .hero::before {
       content: "";
       position: absolute;
-      inset: -7% -9% -22% -8%;
+      inset: -3% -9% -22% -8%;
       z-index: -3;
-      background: url("assets/hero-sign.jpg") center 45% / cover no-repeat;
+      background: url("assets/hero-sign.jpg") center 54% / cover no-repeat;
       opacity: .96;
-      transform: translate(-1.5%, -4%) rotate(2.4deg) scale(1.15);
+      transform: translate(-1.5%, .5%) rotate(1.6deg) scale(1.13);
       transform-origin: 42% 32%;
     }
 
@@ -153,7 +153,21 @@
         radial-gradient(ellipse at 72% 68%, rgba(255,250,243,0) 0 40%, rgba(255,250,243,.42) 72%, var(--paper) 100%);
     }
 
+    .hero-inner::before {
+      content: "";
+      position: absolute;
+      left: -8vw;
+      right: -8vw;
+      top: -110px;
+      height: 138px;
+      z-index: -1;
+      pointer-events: none;
+      background: linear-gradient(180deg, rgba(255,250,243,.9), rgba(255,250,243,.48) 48%, rgba(255,250,243,0));
+      backdrop-filter: blur(2px);
+    }
+
     .hero-inner {
+      position: relative;
       width: min(1180px, 100%);
       display: grid;
       grid-template-columns: minmax(0, 1.04fr) minmax(300px, .76fr);
