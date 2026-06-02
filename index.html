@@ -452,12 +452,28 @@
     }
 
     .image-stack figure {
+      position: relative;
       margin: 0;
       overflow: hidden;
       min-height: 260px;
       border-radius: 8px;
       background: var(--mist);
       box-shadow: var(--shadow);
+    }
+
+    .image-stack figcaption {
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      padding: 10px 12px;
+      color: var(--deep);
+      background: rgba(255,255,255,.88);
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 850;
+      line-height: 1.45;
+      box-shadow: 0 10px 24px rgba(7, 54, 66, .12);
     }
 
     .image-stack figure:first-child {
@@ -883,27 +899,30 @@
       <div class="section-inner split">
         <div>
           <p class="kicker">Originality</p>
-          <h2>世界にひとつだけの海</h2>
-          <p class="subcopy">ひとつずつ違う波の表情を、丁寧に。</p>
-          <p class="text">波の広がりも、白波の流れも、同じものはひとつとしてありません。世界にひとつだけの海をお届けします。</p>
+          <h2>同じ波は、ひとつとしてありません。</h2>
+          <p class="subcopy">色の重なり、白波の流れ、光の入り方まで少しずつ違います。</p>
+          <p class="text">Michelle's Labの作品は、ひとつずつ手作業で仕上げる海のレジンアートです。飾る場所や贈る相手を思い浮かべながら、自分だけの小さな海を選べます。</p>
           <div class="feature-list">
             <div class="feature-row">
-              <div><b>Ocean Motif</b><span>ハワイを感じる波の表情。暮らしの中に、ハワイの海を。波音が聞こえてきそうな青と白を、レジンで表現しています。</span></div>
-              <strong>Hawaii</strong>
+              <div><b>ハワイの海を感じる色</b><span>青と白のグラデーション、砂浜のきらめき、やわらかな波の表情をレジンで表現しています。</span></div>
             </div>
             <div class="feature-row">
-              <div><b>Gift Piece</b><span>贈りたくなる小さな海。誕生日や記念日、感謝の気持ちを伝える贈り物として選ばれています。</span></div>
-              <strong>Gift</strong>
+              <div><b>贈り物にしやすい小さな海</b><span>誕生日や記念日、感謝の気持ちを伝えるギフトとしても選びやすい作品です。</span></div>
             </div>
             <div class="feature-row">
-              <div><b>Small Ocean</b><span>暮らしに寄り添う海。デスクや玄関、リビングに、いつでもそばに置ける小さな海です。</span></div>
-              <strong>Small</strong>
+              <div><b>毎日の暮らしに置ける作品</b><span>デスク、玄関、リビングなど、いつもの場所にそっと海の雰囲気を添えられます。</span></div>
             </div>
           </div>
         </div>
         <div class="image-stack">
-          <figure><img src="assets/plate-shell.jpg" alt="シェルを添えた海レジンプレート作品"></figure>
-          <figure><img src="assets/round-blue.jpg" alt="青い海の丸型レジン作品"></figure>
+          <figure>
+            <img src="assets/product-coaster.jpg" alt="青と白の波を表現した海レジン作品">
+            <figcaption>青と白の波が、ひとつずつ違う表情に。</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/product-keyholder.jpg" alt="ギフトにも選びやすい海レジンのキーホルダー作品">
+            <figcaption>持ち歩ける作品やギフトにも。</figcaption>
+          </figure>
         </div>
       </div>
     </section>
