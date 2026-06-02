@@ -394,17 +394,23 @@
 
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       gap: 14px;
       margin-top: 34px;
     }
 
     .product {
+      grid-column: span 2;
       overflow: hidden;
       border: 1px solid var(--line);
       border-radius: 8px;
       background: var(--white);
       box-shadow: 0 10px 26px rgba(65, 82, 82, .06);
+    }
+
+    .product:first-child,
+    .product:nth-child(2) {
+      grid-column: span 3;
     }
 
     .product figure {
@@ -858,7 +864,13 @@
 
     @media (max-width: 1040px) {
       .product-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .product,
+      .product:first-child,
+      .product:nth-child(2) {
+        grid-column: span 1;
       }
     }
 
