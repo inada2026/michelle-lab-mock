@@ -882,17 +882,23 @@
       }
 
       .brand {
-        display: block;
+        display: flex;
+        align-items: center;
       }
 
-      .brand span:last-child,
+      .brand-text,
       .nav a:not(:last-child) {
         display: none;
       }
 
+      .brand-avatar {
+        width: 36px;
+        height: 36px;
+      }
+
       .hero {
         min-height: auto;
-        padding: 96px 22px 58px;
+        padding: 92px 22px 58px;
       }
 
       .hero-inner,
@@ -906,19 +912,48 @@
         justify-content: flex-start;
       }
 
-      .hero-panel {
-        min-height: 330px;
+      h1 {
+        max-width: 100%;
+        font-size: clamp(40px, 14vw, 58px);
+        line-height: 1.08;
       }
 
-      .resin-piece {
+      .lead {
+        max-width: 100%;
+      }
+
+      .hero-panel {
+        min-height: 290px;
+        margin-top: 24px;
+      }
+
+      .hero.variant-plate .resin-piece {
         left: 0;
         right: auto;
         top: 0;
+        width: min(330px, 100%);
+        border-width: 8px;
+        border-radius: 20px;
+        transform: rotate(-3.4deg);
       }
 
-      .mini-profile {
-        right: 0;
+      .hero.variant-plate .mini-profile {
         left: auto;
+        right: 0;
+        bottom: 10px;
+        width: min(300px, 92%);
+        grid-template-columns: 48px 1fr;
+        padding: 12px 14px;
+      }
+
+      .hero.variant-plate .mini-profile img {
+        width: 48px;
+        height: 48px;
+      }
+
+      .hero.variant-plate .mini-profile p {
+        font-size: 11px;
+        line-height: 1.5;
       }
 
       .section {
@@ -949,7 +984,15 @@
       }
 
       .hero-panel {
-        min-height: 380px;
+        min-height: 270px;
+      }
+
+      .hero.variant-plate .resin-piece {
+        width: min(300px, 96%);
+      }
+
+      .hero.variant-plate .mini-profile {
+        width: min(275px, 94%);
       }
     }
   </style>
