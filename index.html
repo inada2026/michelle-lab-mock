@@ -884,16 +884,36 @@
       .brand {
         display: flex;
         align-items: center;
+        gap: 8px;
+        min-width: 0;
       }
 
-      .brand-text,
       .nav a:not(:last-child) {
         display: none;
+      }
+
+      .brand-text {
+        display: block;
+        min-width: 0;
       }
 
       .brand-avatar {
         width: 36px;
         height: 36px;
+      }
+
+      .brand-title {
+        max-width: 132px;
+        overflow: hidden;
+        font-size: 17px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .brand-subtitle {
+        margin-top: 3px;
+        font-size: 10px;
+        white-space: nowrap;
       }
 
       .hero {
@@ -979,6 +999,29 @@
     }
 
     @media (max-width: 560px) {
+      .topbar {
+        gap: 10px;
+        padding: 10px 14px;
+      }
+
+      .brand-title {
+        max-width: 112px;
+        font-size: 16px;
+      }
+
+      .brand-subtitle {
+        font-size: 9px;
+      }
+
+      .nav {
+        font-size: 11px;
+      }
+
+      .nav a:last-child {
+        min-height: 34px;
+        padding: 0 11px;
+      }
+
       .image-stack {
         grid-template-columns: 1fr;
       }
