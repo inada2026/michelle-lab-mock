@@ -225,6 +225,7 @@
 
     .button {
       display: inline-flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 48px;
@@ -234,6 +235,15 @@
       background: var(--teal);
       font-weight: 900;
       box-shadow: 0 12px 26px rgba(7, 111, 131, .2);
+    }
+
+    .button small {
+      display: block;
+      margin-top: 2px;
+      color: rgba(16, 43, 51, .62);
+      font-size: 10px;
+      font-weight: 800;
+      line-height: 1.25;
     }
 
     .button.light {
@@ -382,6 +392,55 @@
       font-size: 16px;
     }
 
+    .about-card {
+      display: grid;
+      grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr);
+      gap: min(5vw, 56px);
+      align-items: center;
+      padding: 34px;
+      background: rgba(255,255,255,.72);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 18px 46px rgba(65, 82, 82, .08);
+    }
+
+    .about-photo {
+      min-height: 320px;
+      overflow: hidden;
+      margin: 0;
+      border-radius: 8px;
+      background: var(--mist);
+      box-shadow: var(--shadow);
+    }
+
+    .about-copy::before {
+      content: "Aloha!";
+      display: inline-flex;
+      margin-bottom: 14px;
+      padding: 5px 12px;
+      color: var(--teal);
+      background: #e4fbf8;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 950;
+      letter-spacing: .04em;
+    }
+
+    .about-copy h2 {
+      margin-bottom: 14px;
+    }
+
+    .about-copy p {
+      margin-bottom: 12px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.85;
+    }
+
+    .about-copy p:last-child {
+      margin-bottom: 0;
+    }
+
     .subcopy {
       max-width: 760px;
       margin-bottom: 12px;
@@ -440,9 +499,9 @@
     }
 
     .product-card-plate img {
-      object-position: center 50%;
-      filter: brightness(1.42) contrast(.92) saturate(1.12);
-      transform: scale(1.46);
+      object-position: center 54%;
+      filter: brightness(1.28) contrast(.96) saturate(1.1);
+      transform: scale(1.5);
       transform-origin: center center;
     }
 
@@ -484,7 +543,7 @@
     .image-stack {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 14px;
+      gap: 18px;
     }
 
     .image-stack figure {
@@ -492,9 +551,14 @@
       margin: 0;
       overflow: hidden;
       min-height: 260px;
+      padding: 10px;
       border-radius: 8px;
-      background: var(--mist);
+      background: rgba(255,255,255,.72);
       box-shadow: var(--shadow);
+    }
+
+    .image-stack img {
+      border-radius: 6px;
     }
 
     .image-stack figcaption {
@@ -614,7 +678,7 @@
     }
 
     .flow-cta::after {
-      content: "→";
+      content: ">";
       font-size: 16px;
       line-height: 1;
     }
@@ -856,6 +920,11 @@
       font-size: clamp(26px, 4vw, 42px);
     }
 
+    .cta .kicker {
+      margin-bottom: 8px;
+      color: rgba(255,255,255,.72);
+    }
+
     .cta p {
       margin: 0;
       color: rgba(255,255,255,.78);
@@ -928,6 +997,7 @@
       }
 
       .hero-inner,
+      .about-card,
       .split,
       .video-strip,
       .cta {
@@ -1002,6 +1072,15 @@
       .cta {
         padding: 26px;
       }
+
+      .cta-content {
+        grid-template-columns: 56px 1fr;
+      }
+
+      .cta-character {
+        width: 56px;
+        height: 56px;
+      }
     }
 
     @media (max-width: 560px) {
@@ -1066,13 +1145,13 @@
   <section class="hero variant-plate" id="top">
     <div class="hero-inner">
       <div>
-        <p class="kicker">Ocean Resin Atelier</p>
-        <h1>いつもハワイ、波音が響く<span class="hero-word">青</span>を届ける。</h1>
-        <p class="lead">海が好きな人に、そっと伝わるハワイの気配。Michelle's Labは、レジンで生まれる波の表情を、トレイ、コースター、ギフト、レッスンに仕立てる小さなアトリエです。</p>
+        <p class="kicker">Ocean Art by Honua Michelly</p>
+        <h1>いつでも、暮らしのそばに<span class="hero-word">ハワイ</span>を。</h1>
+        <p class="lead">海が好きな人に、そっと伝わるハワイの空気。<br>Michelle's Labは、レジンで描く波の表情を作品やギフト、レッスンを通してお届けしています。</p>
         <div class="actions">
-          <a class="button light" href="#works">作品を見る</a>
-          <a class="button ghost" href="#lesson">レッスン相談</a>
-          <a class="button ghost" href="#order">BASE準備中</a>
+          <a class="button light" href="#works">作品を見る<small>世界にひとつだけの海を探す</small></a>
+          <a class="button ghost" href="#lesson">レッスン相談<small>自分だけの海を作ってみたい</small></a>
+          <a class="button ghost" href="#order">BASE準備中<small>オンラインショップ準備中</small></a>
         </div>
       </div>
       <div class="hero-panel" aria-label="レジンで作った波の作品イメージ">
@@ -1081,7 +1160,7 @@
           <img src="assets/michelly-character.jpg" alt="Michelle's Labのキャラクター">
           <div>
             <b>Michelle's Lab</b>
-            <p>光の角度で変わる波の表情。ひとつずつ手作業で制作しています。</p>
+            <p>Aloha! ハワイと海が大好き。波をレジンで表現しています。</p>
           </div>
         </div>
       </div>
@@ -1089,45 +1168,60 @@
   </section>
 
   <main>
+    <section class="section" id="about">
+      <div class="section-inner about-card">
+        <figure class="about-photo">
+          <img src="assets/about-wave-board.jpg" alt="ハワイの海を思わせる横長のレジンアート作品">
+        </figure>
+        <div class="about-copy">
+          <p class="kicker">About Honua Michelly</p>
+          <h2>ハワイと海、そして小さな惑星のような世界。</h2>
+          <p>ハワイと海が大好き。波をレジンで表現しています。作品制作だけでなく、レッスンやワークショップも開催しています。</p>
+          <p>アーティスト名は「Honua Michelly（ホヌア・ミシェリー）」。ハワイ語の「Honua」に由来しています。</p>
+          <p>Honuaには「大地」や「惑星」という意味があって、海だけでなく宇宙も好きな私にとって、「みしぇり惑星」のような特別な名前になりました。</p>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="works">
       <div class="section-inner">
         <p class="kicker">Lineup</p>
         <h2>飾る、使う、贈る。ひとつずつ違う、あなただけの海。</h2>
-        <p class="text">コースターやトレイ、タンブラー、キーホルダーなど、海を身近に感じられるアイテムを揃えています。</p>
+        <p class="text">二度と同じ波が生まれないように、作品もまた世界にひとつだけ。</p>
         <div class="product-grid">
           <article class="product">
             <figure><img src="assets/product-tray.jpg" alt="レジンのトレイ作品"></figure>
             <div class="product-body">
               <h3>Tray</h3>
-              <p>イベントでも人気の、置くだけで海を感じるトレイ。</p>
+              <p>暮らしの中に、ハワイの海を。お気に入りの小物やアクセサリーを置くだけで、海を感じる空間に。</p>
             </div>
           </article>
           <article class="product">
             <figure><img src="assets/product-coaster.jpg" alt="レジンのコースター作品"></figure>
             <div class="product-body">
               <h3>Coaster</h3>
-              <p>日常使いにもギフトにも選びやすい小さな海。</p>
+              <p>毎日のひとときに、小さな海を。コーヒーやお茶の時間に、波の景色を添えるコースターです。</p>
             </div>
           </article>
           <article class="product product-card-plate">
-            <figure><img src="assets/product-card-plate.jpg" alt="名刺サイズのレジンプレート"></figure>
+            <figure><img src="assets/product-card-plate-new.jpg" alt="名刺サイズのレジンプレート"></figure>
             <div class="product-body">
               <h3>Card Plate</h3>
-              <p>受付やデスクに飾りやすい名刺サイズのプレート。</p>
+              <p>いつでも目に入る場所に、小さな海を。</p>
             </div>
           </article>
           <article class="product">
             <figure><img src="assets/product-keyholder.jpg" alt="キーホルダーを含む作品イメージ"></figure>
             <div class="product-body">
-              <h3>Keyholder</h3>
-              <p>定番で制作している、持ち歩ける海のアクセント。</p>
+              <h3>Key holder</h3>
+              <p>持ち歩ける、小さなハワイ。</p>
             </div>
           </article>
           <article class="product">
-            <figure><img src="assets/product-tumbler.png" alt="タンブラー作品のイメージ"></figure>
+            <figure><img src="assets/lineup-tumbler-new.jpg" alt="タンブラー作品のイメージ"></figure>
             <div class="product-body">
               <h3>Tumbler</h3>
-              <p>誕生日プレゼントにも選ばれる特別感のある作品。</p>
+              <p>毎日のひとときに、波の景色を。</p>
             </div>
           </article>
         </div>
@@ -1138,29 +1232,29 @@
       <div class="section-inner split">
         <div>
           <p class="kicker">Originality</p>
-          <h2>同じ波は、ひとつとしてありません。</h2>
-          <p class="subcopy">色の重なり、白波の流れ、光の入り方まで少しずつ違います。</p>
-          <p class="text">Michelle's Labの作品は、ひとつずつ手作業で仕上げる海のレジンアートです。飾る場所や贈る相手を思い浮かべながら、自分だけの小さな海を選べます。</p>
+          <h2>世界にひとつだけの海</h2>
+          <p class="subcopy">ひとつずつ違う波の表情を、丁寧に。</p>
+          <p class="text">波の広がりも、白波の流れも、同じものはひとつとしてありません。世界にひとつだけの海をお届けします。</p>
           <div class="feature-list">
             <div class="feature-row">
-              <div><b>ハワイの海を感じる色</b><span>青と白のグラデーション、砂浜のきらめき、やわらかな波の表情をレジンで表現しています。</span></div>
+              <div><b>Ocean Motif</b><span>ハワイを感じる波の表情。暮らしの中に、ハワイの海を。波音が聞こえてきそうな青と白。ハワイの海を思わせる景色を、レジンで表現しています。</span></div>
             </div>
             <div class="feature-row">
-              <div><b>贈り物にしやすい小さな海</b><span>誕生日や記念日、感謝の気持ちを伝えるギフトとしても選びやすい作品です。</span></div>
+              <div><b>Gift Piece</b><span>贈りたくなる小さな海。大切な人へ、小さな海の贈り物。誕生日や記念日、感謝の気持ちを伝える贈り物として選ばれています。</span></div>
             </div>
             <div class="feature-row">
-              <div><b>毎日の暮らしに置ける作品</b><span>デスク、玄関、リビングなど、いつもの場所にそっと海の雰囲気を添えられます。</span></div>
+              <div><b>Small Ocean</b><span>暮らしに寄り添う海。いつでも、そばに置ける海。デスクや玄関、リビングに。日常に寄り添う小さな海です。</span></div>
             </div>
           </div>
         </div>
         <div class="image-stack">
           <figure>
-            <img src="assets/product-coaster.jpg" alt="青と白の波を表現した海レジン作品">
-            <figcaption>青と白の波が、ひとつずつ違う表情に。</figcaption>
+            <img src="assets/originality-island-close.jpg" alt="ハワイの海を思わせるレジンアート作品">
+            <figcaption>青と白が描く、世界にひとつだけの波。</figcaption>
           </figure>
           <figure>
-            <img src="assets/product-keyholder.jpg" alt="ギフトにも選びやすい海レジンのキーホルダー作品">
-            <figcaption>持ち歩ける作品やギフトにも。</figcaption>
+            <img src="assets/originality-island.jpg" alt="小さな島を表現したレジンアート作品">
+            <figcaption>自分のための小さな海にも、特別なギフトにも。</figcaption>
           </figure>
         </div>
       </div>
@@ -1169,8 +1263,8 @@
     <section class="section" id="order">
       <div class="section-inner">
         <div class="quote-band">
-          <p>見たい・買いたい・相談したい時に、すぐつながれます。</p>
-          <span>作品写真や制作の様子、レッスンのご相談、販売再開のお知らせまで、わかりやすくご案内します。</span>
+          <p>あなたの暮らしのそばに、ハワイを。</p>
+          <span>作品写真や制作の様子、レッスンのご相談、販売のお知らせなどを発信しています。気になる海が見つかったら、ぜひお気軽にご連絡ください。</span>
         </div>
         <div class="flow" aria-label="お問い合わせとSNSの入口">
           <a class="flow-card" href="https://www.instagram.com/michelly_aloha/" target="_blank" rel="noopener">
@@ -1181,8 +1275,8 @@
           </a>
           <a class="flow-card" href="https://lin.ee/uU3DzxQ" target="_blank" rel="noopener">
             <b><span class="social-icon line">LINE</span>公式LINE</b>
-            <p>オーダーやレッスン、作品についてのご相談はこちら。気になることを直接聞きたい時に。</p>
-            <span class="flow-cta">LINEで相談する</span>
+            <p>最新情報やイベント出店のお知らせをお届けします。気になる作品を見つける入口としても使えます。</p>
+            <span class="flow-cta">公式LINEを見る</span>
             <span class="flow-character"><img src="assets/michelly-face-2.jpg" alt="Michelle's Labのキャラクター"></span>
           </a>
           <a class="flow-card" href="https://lit.link/michelles_lab" target="_blank" rel="noopener">
@@ -1205,35 +1299,35 @@
       <div class="section-inner split">
         <div>
           <p class="kicker">Guide</p>
-          <h2>買う・相談する・体験する入口を、わかりやすく。</h2>
-          <p class="text">作品を購入したい方、オーダーやレッスンについて相談したい方、ワークショップ情報を知りたい方が迷わないように、それぞれの入口を整理します。</p>
+          <h2>作品を迎える、作る、相談する。</h2>
+          <p class="text">購入やオーダー、レッスンやワークショップについて、目的に合わせた入口をご案内します。</p>
           <div class="feature-list">
             <div class="feature-row">
-              <div><b>作品の購入</b><span>販売はBASEにまとめます。現在は準備中として掲載し、再開後に商品ページへ案内します。</span></div>
+              <div><b>作品の購入</b><span>販売作品はBASEでご案内予定です。現在は準備中のため、再開後にオンラインショップへ進めるようにします。</span></div>
               <strong>BASE準備中</strong>
             </div>
             <div class="feature-row">
-              <div><b>オーダー・相談</b><span>作品の希望、ギフト制作、レッスンについての相談は公式LINEへつなげます。</span></div>
-              <strong>公式LINE</strong>
+              <div><b>オーダー・相談</b><span>作品やギフト制作、レッスンについて気になることがある方は、お問い合わせフォームからご連絡いただけます。</span></div>
+              <strong>フォーム</strong>
             </div>
             <div class="feature-row">
-              <div><b>ワークショップ</b><span>単発開催やイベント出店など、日程が決まったものから案内します。</span></div>
+              <div><b>ワークショップ</b><span>単発ワークショップやイベント出店など、開催が決まった内容からお知らせします。</span></div>
               <strong>準備中</strong>
             </div>
             <div class="feature-row">
-              <div><b>講師養成講座</b><span>現在は準備中です。内容や開始時期が決まり次第、控えめに掲載します。</span></div>
+              <div><b>講師養成講座</b><span>講師養成講座は現在準備中です。内容や開始時期が整い次第、こちらでご案内します。</span></div>
               <strong>準備中</strong>
             </div>
           </div>
         </div>
         <div class="image-stack lesson-visuals">
           <figure>
-            <img src="assets/product-tray.jpg" alt="飾って楽しめる海レジンのトレイ作品">
+            <img src="assets/guide-soap-dispenser.jpg" alt="海を表現したレジンアートのソープディスペンサー作品">
             <figcaption>作品販売はBASE再開後にご案内。</figcaption>
           </figure>
           <figure>
-            <img src="assets/product-tumbler.png" alt="ギフトにも選びやすい海レジンのタンブラー作品">
-            <figcaption>オーダーやレッスン相談は公式LINEへ。</figcaption>
+            <img src="assets/lineup-tumbler-new.jpg" alt="ギフトにも選びやすい海レジンのタンブラー作品">
+            <figcaption>ひとつずつ違う波の表情を、そのまま形に。</figcaption>
           </figure>
         </div>
       </div>
@@ -1242,7 +1336,7 @@
     <section class="section band" id="youtube">
       <div class="section-inner">
         <p class="kicker">YouTube</p>
-        <h2>波が生まれる瞬間は、動画で伝わる。</h2>
+        <h2>波が広がる、その瞬間を。</h2>
         <div class="video-strip">
           <a class="video-link" href="https://www.youtube.com/watch?v=CZvmw-uRfyg" target="_blank" rel="noopener">
             <figure>
@@ -1258,8 +1352,8 @@
                 <b>Michelle's Lab<br>ハワイアンアート研究所</b>
               </div>
             </div>
-            <h3>YouTubeで制作風景や作品紹介を発信しています。</h3>
-            <p>波が広がる瞬間や作品の質感、レッスンの雰囲気など、写真だけでは伝わりにくい魅力を動画でも紹介しています。</p>
+            <h3>Michelle's Lab ハワイアンアート研究所では、制作風景や作品紹介、レッスンの様子を発信しています。</h3>
+            <p>ハワイの海を思わせる青と白が、ひとつの作品になるまでの時間を動画でお届けします。</p>
           </div>
         </div>
         <div class="links youtube-links" aria-label="YouTubeリンク">
@@ -1274,8 +1368,10 @@
         <div class="cta-content">
           <span class="cta-character"><img src="assets/michelly-face-6.png" alt="Michelle's Labのキャラクター"></span>
           <div>
-            <h2>お問い合わせはフォームから。</h2>
-            <p>作品、ギフト制作、ワークショップのご相談をGoogleフォームで受け付ける想定です。正式なフォームURLが決まり次第、このボタンに設定します。</p>
+            <p class="kicker">Contact</p>
+            <h2>海のある暮らしについて、お気軽に。</h2>
+            <p>作品やオーダー制作、ギフトのご相談、ワークショップのお問い合わせを受け付けています。気になることがありましたら、お問い合わせフォームよりお気軽にご連絡ください。</p>
+            <p>最新情報やイベント出店のお知らせは、公式LINEでもお届けしています。</p>
           </div>
         </div>
         <div class="cta-actions">
@@ -1287,7 +1383,9 @@
   </main>
 
   <footer>
-    Michelle's Lab / Hawaiian Resin Art / Brush-up mock 2026-05-25
+    <b>Mahalo！</b><br>
+    Michelle's Labへお立ち寄りいただき、ありがとうございます。<br>
+    これからも、暮らしのそばにハワイを届けていきます。
   </footer>
 </body>
 </html>
