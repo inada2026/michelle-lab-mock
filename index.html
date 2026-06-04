@@ -937,6 +937,45 @@
       border-top: 1px solid var(--line);
     }
 
+    .legal-section {
+      background: #fff;
+      border-top: 1px solid var(--line);
+      padding: 42px min(6vw, 76px);
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .legal-inner {
+      max-width: 900px;
+    }
+
+    .legal-section h2 {
+      margin: 0 0 14px;
+      color: var(--ink);
+      font-size: clamp(24px, 3vw, 34px);
+    }
+
+    .footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 20px;
+      margin-top: 18px;
+    }
+
+    .footer-nav a {
+      color: var(--teal);
+      font-weight: 800;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(7, 111, 131, .35);
+    }
+
+    .copyright {
+      display: block;
+      margin-top: 18px;
+      color: var(--muted);
+    }
+
     @media (max-width: 1040px) {
       .product-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1382,10 +1421,23 @@
     </section>
   </main>
 
+  <section class="legal-section" id="privacy-policy">
+    <div class="legal-inner">
+      <p class="kicker">Privacy Policy</p>
+      <h2>プライバシーポリシー</h2>
+      <p>Michelle's Labでは、お問い合わせフォーム等を通じてお預かりしたお名前、メールアドレス、お問い合わせ内容を、ご連絡への返信、作品制作・レッスン・ワークショップに関するご案内のために利用します。</p>
+      <p>お預かりした個人情報は、法令に基づく場合を除き、ご本人の同意なく第三者へ提供することはありません。お問い合わせフォーム等で外部サービスを利用する場合は、各サービスの規約・プライバシーポリシーに基づき適切に取り扱います。</p>
+    </div>
+  </section>
+
   <footer>
     <b>Mahalo！</b><br>
     Michelle's Labへお立ち寄りいただき、ありがとうございます。<br>
     これからも、暮らしのそばにハワイを届けていきます。
+    <nav class="footer-nav" aria-label="フッターナビゲーション">
+      <a href="#privacy-policy">プライバシーポリシー</a>
+    </nav>
+    <span class="copyright">Copyright © Michelle's Lab All Rights Reserved.</span>
   </footer>
 </body>
 </html>
