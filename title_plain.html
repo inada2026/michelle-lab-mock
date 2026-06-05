@@ -405,12 +405,17 @@
     }
 
     .about-photo {
-      min-height: 320px;
+      aspect-ratio: 16 / 9;
+      min-height: 0;
       overflow: hidden;
       margin: 0;
       border-radius: 8px;
       background: var(--mist);
       box-shadow: var(--shadow);
+    }
+
+    .about-photo img {
+      object-position: center;
     }
 
     .about-copy h2 {
