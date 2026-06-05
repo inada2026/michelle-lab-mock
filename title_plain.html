@@ -592,13 +592,15 @@
 
     .lesson-visuals figure {
       min-height: 0;
-      aspect-ratio: 4 / 5;
+      aspect-ratio: 9 / 16;
     }
 
     .lesson-visuals .dispenser-card img {
-      object-fit: contain;
-      object-position: center;
+      object-fit: cover;
+      object-position: center bottom;
       background: rgba(255,255,255,.92);
+      transform: scale(1.07);
+      transform-origin: center bottom;
     }
 
     .originality-island-card img {
