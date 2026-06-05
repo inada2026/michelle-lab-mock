@@ -590,6 +590,12 @@
       filter: brightness(1.08) contrast(.94) saturate(1.06);
     }
 
+    .lesson-visuals .dispenser-card img {
+      object-fit: contain;
+      object-position: center;
+      background: rgba(255,255,255,.92);
+    }
+
     .originality-island-card img {
       object-fit: cover;
       object-position: center 56%;
@@ -1166,6 +1172,10 @@
         padding: 8px;
       }
 
+      .lesson-visuals figure {
+        aspect-ratio: 4 / 5;
+      }
+
       .originality-island-card img {
         object-position: center 58%;
         transform: scale(1.04);
@@ -1383,7 +1393,7 @@
           </div>
         </div>
         <div class="image-stack lesson-visuals">
-          <figure>
+          <figure class="dispenser-card">
             <img src="assets/guide-soap-dispenser.jpg" alt="海を表現したレジンアートのソープディスペンサー作品">
             <figcaption>作品販売はBASE再開後にご案内。</figcaption>
           </figure>
