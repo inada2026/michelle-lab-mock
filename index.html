@@ -413,19 +413,6 @@
       box-shadow: var(--shadow);
     }
 
-    .about-copy::before {
-      content: "Aloha!";
-      display: inline-flex;
-      margin-bottom: 14px;
-      padding: 5px 12px;
-      color: var(--teal);
-      background: #e4fbf8;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: 950;
-      letter-spacing: .04em;
-    }
-
     .about-copy h2 {
       margin-bottom: 14px;
     }
@@ -454,7 +441,7 @@
     .product-grid {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
-      gap: 14px;
+      gap: 22px;
       margin-top: 34px;
     }
 
@@ -540,6 +527,24 @@
       white-space: nowrap;
     }
 
+    .guide-button {
+      min-width: 118px;
+      min-height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 16px;
+      color: var(--deep);
+      background: rgba(255,255,255,.9);
+      border: 1px solid rgba(7,111,131,.2);
+      border-radius: 999px;
+      box-shadow: 0 10px 22px rgba(14, 78, 91, .08);
+      font-size: 13px;
+      font-weight: 900;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
     .image-stack {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -578,6 +583,12 @@
 
     .lesson-visuals img {
       filter: brightness(1.08) contrast(.94) saturate(1.06);
+    }
+
+    .originality-island-card img {
+      object-fit: contain;
+      object-position: center;
+      background: #fff;
     }
 
     .image-stack figure:first-child {
@@ -933,7 +944,8 @@
     footer {
       padding: 34px min(6vw, 76px);
       color: var(--muted);
-      font-size: 13px;
+      font-size: 15px;
+      line-height: 1.8;
       border-top: 1px solid var(--line);
     }
 
@@ -1151,7 +1163,7 @@
       <span class="brand-avatar"><img src="assets/michelly-character.jpg" alt="Michelle's Labのアイコン"></span>
       <span class="brand-text">
         <span class="brand-title">Michelle's Lab</span>
-        <span class="brand-subtitle">Hawaiian Resin Art</span>
+        <span class="brand-subtitle">Hawaiian Art Atelier</span>
       </span>
     </a>
     <nav class="nav" aria-label="Main navigation">
@@ -1165,13 +1177,13 @@
   <section class="hero variant-plate" id="top">
     <div class="hero-inner">
       <div>
-        <p class="kicker">Ocean Art by Honua Michelly</p>
-        <h1>いつでも、暮らしのそばに<span class="hero-word">ハワイ</span>を。</h1>
+        <p class="kicker">Hawaiian Art Atelier</p>
+        <h1>いつもハワイ、波音が響く<span class="hero-word">青</span>を届ける。</h1>
         <p class="lead">海が好きな人に、そっと伝わるハワイの空気。<br>Michelle's Labは、レジンで描く波の表情を作品やギフト、レッスンを通してお届けしています。</p>
         <div class="actions">
           <a class="button light" href="#works">作品を見る<small>世界にひとつだけの海を探す</small></a>
           <a class="button ghost" href="#lesson">レッスン相談<small>自分だけの海を作ってみたい</small></a>
-          <a class="button ghost" href="#order">BASE準備中<small>オンラインショップ準備中</small></a>
+          <a class="button ghost" href="#order">BASE<small>オンラインショップはこれから</small></a>
         </div>
       </div>
       <div class="hero-panel" aria-label="レジンで作った波の作品イメージ">
@@ -1180,7 +1192,7 @@
           <img src="assets/michelly-character.jpg" alt="Michelle's Labのキャラクター">
           <div>
             <b>Michelle's Lab</b>
-            <p>Aloha! ハワイと海が大好き。波をレジンで表現しています。</p>
+            <p>Aloha!<br>暮らしのそばに、小さなハワイを。<br>Michelle's Labへようこそ！</p>
           </div>
         </div>
       </div>
@@ -1195,10 +1207,12 @@
         </figure>
         <div class="about-copy">
           <p class="kicker">About Honua Michelly</p>
-          <h2>ハワイと海、そして小さな惑星のような世界。</h2>
-          <p>ハワイと海が大好き。波をレジンで表現しています。作品制作だけでなく、レッスンやワークショップも開催しています。</p>
-          <p>アーティスト名は「Honua Michelly（ホヌア・ミシェリー）」。ハワイ語の「Honua」に由来しています。</p>
-          <p>Honuaには「大地」や「惑星」という意味があって、海だけでなく宇宙も好きな私にとって、「みしぇり惑星」のような特別な名前になりました。</p>
+          <h2>ハワイの海に魅せられて。</h2>
+          <p>Michelle's Labの所長をしています、Honua Michellyです。ハワイの海に魅せられ、その景色や癒しをレジンアートで表現しています。</p>
+          <p>作品制作だけでなく、レッスンやワークショップも開催しながら、海の魅力をお届けしています。</p>
+          <p>アーティスト名の「Honua Michelly（ホヌア・ミシェリー）」は、ハワイ語の「Honua」に由来しています。</p>
+          <p>Honuaには「大地」や「惑星」という意味があります。海だけでなく宇宙も好きな私にとって、「みしぇり惑星」のような特別な名前です。</p>
+          <p>作品やレッスンを通して、暮らしのそばに小さなハワイを届けられたら嬉しいです。</p>
         </div>
       </div>
     </section>
@@ -1272,7 +1286,7 @@
             <img src="assets/originality-wave-board-crop.jpg" alt="青と白の波を表現したレジンアート作品">
             <figcaption>青と白が描く、世界にひとつだけの波。</figcaption>
           </figure>
-          <figure>
+          <figure class="originality-island-card">
             <img src="assets/originality-island.jpg" alt="小さな島を表現したレジンアート作品">
             <figcaption>自分のための小さな海にも、特別なギフトにも。</figcaption>
           </figure>
@@ -1289,26 +1303,26 @@
         <div class="flow" aria-label="お問い合わせとSNSの入口">
           <a class="flow-card" href="https://www.instagram.com/michelly_aloha/" target="_blank" rel="noopener">
             <b><span class="social-icon instagram"></span>Instagram</b>
-            <p>新作や制作風景、日々の作品紹介はこちら。作品の雰囲気を写真で見たい方におすすめです。</p>
+            <p>新作や制作風景、日々の作品紹介はこちら。波が広がる瞬間や作品が生まれる過程を、リール動画を中心に発信しています。</p>
             <span class="flow-cta">Instagramを見る</span>
             <span class="flow-character"><img src="assets/michelly-face-1.jpg" alt="Michelle's Labのキャラクター"></span>
           </a>
           <a class="flow-card" href="https://lin.ee/uU3DzxQ" target="_blank" rel="noopener">
             <b><span class="social-icon line">LINE</span>公式LINE</b>
-            <p>最新情報やイベント出店のお知らせをお届けします。気になる作品を見つける入口としても使えます。</p>
+            <p>新作やイベント出店のお知らせをお届けしています。あなただけの海との出会いを見つける入口としてご利用ください。</p>
             <span class="flow-cta">公式LINEを見る</span>
             <span class="flow-character"><img src="assets/michelly-face-2.jpg" alt="Michelle's Labのキャラクター"></span>
           </a>
           <a class="flow-card" href="https://lit.link/michelles_lab" target="_blank" rel="noopener">
             <b><span class="social-icon link">↗</span>lit.link</b>
-            <p>YouTubeやSNSなど、Michelle's Labの関連リンクをまとめて確認できます。</p>
+            <p>作品や動画、SNSなど、Michelle's Labの海につながる入口をまとめています。</p>
             <span class="flow-cta">リンク一覧を見る</span>
             <span class="flow-character"><img src="assets/michelly-face-3.jpg" alt="Michelle's Labのキャラクター"></span>
           </a>
           <a class="flow-card" href="#order">
-            <b><span class="social-icon base">B</span>BASE準備中</b>
-            <p>作品販売は現在準備中です。再開後に、購入できる作品ページへご案内します。</p>
-            <span class="flow-cta">準備中のお知らせ</span>
+            <b><span class="social-icon base">B</span>BASE</b>
+            <p>作品販売は現在準備を進めています。オープン後は、世界にひとつだけの海をご覧いただけます。</p>
+            <span class="flow-cta">これからのお知らせ</span>
             <span class="flow-character"><img src="assets/michelly-face-4.png" alt="Michelle's Labのキャラクター"></span>
           </a>
         </div>
@@ -1323,20 +1337,20 @@
           <p class="text">購入やオーダー、レッスンやワークショップについて、目的に合わせた入口をご案内します。</p>
           <div class="feature-list">
             <div class="feature-row">
-              <div><b>作品の購入</b><span>販売作品はBASEでご案内予定です。現在は準備中のため、再開後にオンラインショップへ進めるようにします。</span></div>
-              <strong>BASE準備中</strong>
+              <div><b>作品の購入</b><span>お気に入りの海を迎えたい方へ。販売作品はオンラインショップ（BASE）でご案内予定です。お気に入りの海と出会える場所として、ただいま準備を進めています。</span></div>
+              <a class="guide-button" href="#order">販売のお知らせ</a>
             </div>
             <div class="feature-row">
-              <div><b>オーダー・相談</b><span>作品やギフト制作、レッスンについて気になることがある方は、お問い合わせフォームからご連絡いただけます。</span></div>
-              <strong>フォーム</strong>
+              <div><b>オーダー・ご相談</b><span>あなただけの海を形に。作品やギフト制作、レッスンについてのご相談を受け付けています。気になることがありましたら、お気軽にお問い合わせください。</span></div>
+              <a class="guide-button" href="https://forms.gle/zaxLNty1k6zKQ4D6A" target="_blank" rel="noopener">相談する</a>
             </div>
             <div class="feature-row">
-              <div><b>ワークショップ</b><span>単発ワークショップやイベント出店など、開催が決まった内容からお知らせします。</span></div>
-              <strong>準備中</strong>
+              <div><b>ワークショップ</b><span>海を作る楽しさを体験したい方へ。単発ワークショップやイベント出店の情報をお知らせします。開催が決まり次第、ご案内いたします。</span></div>
+              <a class="guide-button" href="https://lin.ee/uU3DzxQ" target="_blank" rel="noopener">開催情報へ</a>
             </div>
             <div class="feature-row">
-              <div><b>講師養成講座</b><span>講師養成講座は現在準備中です。内容や開始時期が整い次第、こちらでご案内します。</span></div>
-              <strong>準備中</strong>
+              <div><b>講師養成講座</b><span>海の魅力を伝える仲間を育てるために。講師養成講座は、内容や開講時期が整い次第ご案内いたします。</span></div>
+              <a class="guide-button" href="https://lin.ee/uU3DzxQ" target="_blank" rel="noopener">開講案内へ</a>
             </div>
           </div>
         </div>
@@ -1372,7 +1386,7 @@
                 <b>Michelle's Lab<br>ハワイアンアート研究所</b>
               </div>
             </div>
-            <h3>Michelle's Lab ハワイアンアート研究所では、制作風景や作品紹介、レッスンの様子を発信しています。</h3>
+            <h3>Michelle's Labでは、制作風景や作品紹介、レッスンの様子を発信しています。</h3>
             <p>ハワイの海を思わせる青と白が、ひとつの作品になるまでの時間を動画でお届けします。</p>
           </div>
         </div>
@@ -1395,8 +1409,8 @@
           </div>
         </div>
         <div class="cta-actions">
-          <a class="button form-ready" href="#contact">Googleフォーム準備中</a>
-          <a class="button light" href="https://lin.ee/uU3DzxQ" target="_blank" rel="noopener">公式LINEも見る</a>
+          <a class="button form-ready" href="https://forms.gle/zaxLNty1k6zKQ4D6A" target="_blank" rel="noopener">お問い合わせフォーム</a>
+          <a class="button light" href="https://lin.ee/uU3DzxQ" target="_blank" rel="noopener">公式LINEを見る</a>
         </div>
       </div>
     </section>
