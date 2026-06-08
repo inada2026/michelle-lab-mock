@@ -714,6 +714,81 @@
       line-height: 1;
     }
 
+    .shop-notice {
+      display: grid;
+      grid-template-columns: minmax(0, .95fr) minmax(280px, .65fr);
+      gap: min(5vw, 56px);
+      align-items: center;
+      padding: min(5vw, 52px);
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.88), rgba(234,248,247,.9)),
+        radial-gradient(circle at 82% 18%, rgba(0,164,189,.16), transparent 34%);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 18px 48px rgba(14, 78, 91, .1);
+    }
+
+    .shop-notice h2 {
+      margin-bottom: 14px;
+    }
+
+    .shop-notice p {
+      max-width: 720px;
+      margin-bottom: 14px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.85;
+    }
+
+    .shop-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .shop-actions .button {
+      min-height: 46px;
+      padding: 0 18px;
+      font-size: 14px;
+    }
+
+    .shop-actions .button.ghost {
+      background: rgba(255,255,255,.86);
+    }
+
+    .shop-card {
+      overflow: hidden;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .shop-card figure {
+      height: 220px;
+      margin: 0;
+    }
+
+    .shop-card div {
+      padding: 20px;
+    }
+
+    .shop-card b {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--deep);
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .shop-card span {
+      display: block;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
     .video-strip {
       display: grid;
       grid-template-columns: .9fr 1fr;
@@ -1059,6 +1134,7 @@
 
       .hero-inner,
       .about-card,
+      .shop-notice,
       .split,
       .video-strip,
       .cta {
@@ -1207,6 +1283,10 @@
       .hero.variant-plate .mini-profile {
         width: min(275px, 94%);
       }
+
+      .shop-card figure {
+        height: 190px;
+      }
     }
   </style>
 </head>
@@ -1235,8 +1315,8 @@
         <p class="lead">海が好きな人に、そっと伝わるハワイの空気。<br>Michelle's Labは、レジンで描く波の表情を作品やギフト、レッスンを通してお届けしています。</p>
         <div class="actions">
           <a class="button light" href="#works">作品を見る<small>世界にひとつだけの海を探す</small></a>
-          <a class="button ghost" href="#lesson">レッスン相談<small>自分だけの海を作ってみたい</small></a>
-          <a class="button ghost" href="#order">BASE<small>オンラインショップはこれから</small></a>
+          <a class="button ghost" href="#contact">レッスン相談<small>フォームから相談する</small></a>
+          <a class="button ghost" href="#base">オンラインショップはこちら<small>BASE準備中のご案内</small></a>
         </div>
       </div>
       <div class="hero-panel" aria-label="レジンで作った波の作品イメージ">
@@ -1372,12 +1452,37 @@
             <span class="flow-cta">リンク一覧を見る</span>
             <span class="flow-character"><img src="assets/michelly-face-3.jpg" alt="Michelle's Labのキャラクター"></span>
           </a>
-          <a class="flow-card" href="#order">
+          <a class="flow-card" href="#base">
             <b><span class="social-icon base">B</span>BASE</b>
             <p>作品販売は現在準備を進めています。オープン後は、世界にひとつだけの海をご覧いただけます。</p>
-            <span class="flow-cta">これからのお知らせ</span>
+            <span class="flow-cta">オンラインショップのご案内</span>
             <span class="flow-character"><img src="assets/michelly-face-4.png" alt="Michelle's Labのキャラクター"></span>
           </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section band" id="base">
+      <div class="section-inner">
+        <div class="shop-notice">
+          <div>
+            <p class="kicker">Online Shop</p>
+            <h2>BASEオンラインショップは準備中です。</h2>
+            <p>Michelle's Labの作品販売ページは、現在オープンに向けて準備を進めています。販売再開後は、こちらからBASEのショップへご案内します。</p>
+            <p>今すぐ作品の雰囲気を見たい方はInstagramへ、作品やギフト制作について相談したい方はお問い合わせフォームをご利用ください。</p>
+            <div class="shop-actions">
+              <a class="button light" href="https://www.instagram.com/michelly_aloha/" target="_blank" rel="noopener">Instagramで作品を見る</a>
+              <a class="button ghost" href="https://forms.gle/zaxLNty1k6zKQ4D6A" target="_blank" rel="noopener">作品について相談する</a>
+              <a class="button ghost" href="#works">作品一覧へ戻る</a>
+            </div>
+          </div>
+          <article class="shop-card">
+            <figure><img src="assets/product-keyholder-20260605-photo2.jpg" alt="海を感じるレジンキーホルダー作品"></figure>
+            <div>
+              <b>販売再開まで、もう少しお待ちください。</b>
+              <span>世界にひとつだけの海をお届けできるよう、準備が整い次第お知らせします。</span>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -1391,7 +1496,7 @@
           <div class="feature-list">
             <div class="feature-row">
               <div><b>作品の購入</b><span>お気に入りの海を迎えたい方へ。販売作品はオンラインショップ（BASE）でご案内予定です。お気に入りの海と出会える場所として、ただいま準備を進めています。</span></div>
-              <a class="guide-button" href="#order">販売のお知らせ</a>
+              <a class="guide-button" href="#base">オンラインショップへ</a>
             </div>
             <div class="feature-row">
               <div><b>オーダー・ご相談</b><span>あなただけの海を形に。作品やギフト制作、レッスンについてのご相談を受け付けています。気になることがありましたら、お気軽にお問い合わせください。</span></div>
@@ -1399,11 +1504,11 @@
             </div>
             <div class="feature-row">
               <div><b>ワークショップ</b><span>海を作る楽しさを体験したい方へ。単発ワークショップやイベント出店の情報をお知らせします。開催が決まり次第、ご案内いたします。</span></div>
-              <a class="guide-button" href="https://lin.ee/uU3DzxQ" target="_blank" rel="noopener">開催情報へ</a>
+              <a class="guide-button" href="https://forms.gle/zaxLNty1k6zKQ4D6A" target="_blank" rel="noopener">問い合わせる</a>
             </div>
             <div class="feature-row">
               <div><b>講師養成講座</b><span>海の魅力を伝える仲間を育てるために。講師養成講座は、内容や開講時期が整い次第ご案内いたします。</span></div>
-              <a class="guide-button" href="https://lin.ee/uU3DzxQ" target="_blank" rel="noopener">開講案内へ</a>
+              <a class="guide-button" href="https://forms.gle/zaxLNty1k6zKQ4D6A" target="_blank" rel="noopener">問い合わせる</a>
             </div>
           </div>
         </div>
